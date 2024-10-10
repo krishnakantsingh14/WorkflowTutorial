@@ -1,0 +1,26 @@
+name: FirstWorkFlow
+
+on:
+  push:
+    branches:
+      - main  
+  workflow_dispatch:
+    
+  # push:
+  #   branches: 
+  #   - main
+
+jobs:
+  FirstJob:
+    name: running a bash command
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        
+      - name: run a bash command
+        run: |
+          echo "pwd"
+          echo "Name of the repository is ${{ github.username }}"
+  

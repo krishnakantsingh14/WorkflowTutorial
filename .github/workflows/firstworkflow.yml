@@ -21,6 +21,6 @@ jobs:
         
       - name: run a bash command
         run: |
-          echo "pwd"
-          echo "Name of the repository is ${{ github.username }}"
+          pwd
+          echo "Username is ${ github.actor }"
   

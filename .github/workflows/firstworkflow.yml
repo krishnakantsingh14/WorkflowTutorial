@@ -25,5 +25,8 @@ jobs:
           pwd
           echo "Username is ${GITHUB_ACTOR} on ${{ runner.os }} by ${{ steps.UNK_USER.outputs.USER }}"
 
-    
+      - name: adding job summary
+        run: echo "Build at BUILD_TIME=$(date +'%T')" >> $GITHUB_STEP_SUMMARY
+        
+      - run: echo 'Successful :medal_sports:' >> $GITHUB_STEP_SUMMARY
   

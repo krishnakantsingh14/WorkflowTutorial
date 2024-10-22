@@ -15,9 +15,15 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+
+      - name: Generate an output that would be used in next step
+        id: UNK_USER
+        run: echo "USER=MANUAL_BOT" >> "$GITHUB_OUTPUT"
         
       - name: run a bash command
         run: |
           pwd
-          echo "Username is ${GITHUB_ACTOR} on ${{ runner.os }}"
+          echo "Username is ${GITHUB_ACTOR} on ${{ runner.os }} by ${{ steps.UNK_USER.outputs.USER }}"
+
+    
   

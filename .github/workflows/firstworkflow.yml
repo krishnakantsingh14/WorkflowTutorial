@@ -29,4 +29,6 @@ jobs:
         run: echo "Build at BUILD_TIME=$(date +'%T')" >> $GITHUB_STEP_SUMMARY
         
       - run: echo 'Successful :medal_sports:' >> $GITHUB_STEP_SUMMARY
+      - run: echo 'Successful :rocket:' >> $GITHUB_STEP_SUMMARY
+      
   
